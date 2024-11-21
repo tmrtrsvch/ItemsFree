@@ -1,0 +1,52 @@
+#
+#             ItemsFree v1.0
+#   	      Автор: Тимур
+#   	   Телеграм: @tmrtrsvch
+#
+# /items give <игрок> <предмет> [количество] (items.give) - Выдать предмет игроку
+# /items reload (items.reload) - Перезагрузить конфигурацию
+#
+
+messages:
+  usage: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fИспользование: &#04ff00/items [give|reload]"
+  no-permissions: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fУ вас нет прав на выполнение этой команды!"
+  give-usage: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fИспользование: &#04ff00/items give <игрок> <предмет> [количество]"
+  target-null: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fИгрок не найден!"
+  item-given: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fВы выдали предмет &#04ff00%item% x%amount% &fигроку &#04ff00%player%"
+  item-null: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fЭтот предмет не существует! Доступные варианты: &#04ff00apple&f, &#04ff00magma&f и &#04ff00feather"
+  config-reloaded: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fКонфигурация успешно перезагружена!"
+
+  item-delay: "&#9F08FB&lП&#9807FC&lр&#9006FC&lе&#8905FD&lд&#8103FD&lм&#7A02FE&lе&#7201FE&lт&#6B00FF&lы&7&l: &fВы сможете использовать этот предмет через &a%delay% &fсекунд"
+
+items:
+  apple:
+    material: ENCHANTED_GOLDEN_APPLE
+    name: "&#ff6a00&lИскристое яблоко"
+    lore:
+      - ""
+      - "  &fПри использовании"
+      - "  &fДаёт все эффекты зачарованного золотого яблока"
+      - "  &fС &#ff6a00силой II &fи &#ff6a00скоростью III &fна &#ff6a0030 &fсекунд"
+      - ""
+    effects:
+      INCREASE_DAMAGE: 2, 30 # ЭФФЕКТ: УРОВЕНЬ_ЭФФЕКТА, ДЛИТЕЛЬНОСТЬ_В_СЕКУНДАХ
+      SPEED: 3, 30
+    delay: 10 # Задержка на использование, в секундах
+  magma:
+    material: MAGMA_CREAM
+    name: "&#f52d0a&lМагма-ливалка"
+    lore:
+      - ""
+      - "  &fПри использовании"
+      - "  &fТелепортирует Вас на &#f52d0aсамый высокий &fблок"
+      - ""
+    delay: 10
+  feather:
+    material: FEATHER
+    name: "&#00bbff&lЛетающее перо"
+    lore:
+      - ""
+      - "  &fПри использовании"
+      - "  &fПодбрасывает Вас в воздух"
+      - ""
+    delay: 10

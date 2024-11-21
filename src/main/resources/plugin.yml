@@ -1,0 +1,8 @@
+name: ItemsFree
+version: 1.0
+main: ch.tmrtrsv.itemsfree.ItemsFree
+api-version: 1.16
+authors: [ Тимур ]
+website: t.me/tmrtrsvch
+commands:
+  items:
